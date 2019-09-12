@@ -1,0 +1,12 @@
+<h1>Welcome to my profile</h1>
+
+<form method="POST" action="/save-color">
+  <input type="text" name="color">
+  <input type='submit' value='save color'>
+</form>
+
+{{#each colors}}
+<ul>
+<li onclick="deleteThis(this)" style="color:{{name}}">{{name}}</li>
+</ul>
+{{/each}}
