@@ -8,10 +8,10 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
-
+const password     = process.env.password;
 
 mongoose
-  .connect('mongodb://localhost/newproject', {useNewUrlParser: true})
+  .connect(`mongodb+srv://e-narciso:${password}@cluster0-oaf86.azure.mongodb.net/test`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
